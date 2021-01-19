@@ -1,0 +1,2 @@
+kafka: /etc/confluent/docker/run
+init: sleep 10; bash create-topics.sh

@@ -1,0 +1,2 @@
+kafka: /etc/confluent/docker/run
+producer: bash run-producer.sh
