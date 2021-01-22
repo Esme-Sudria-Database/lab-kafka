@@ -2,7 +2,7 @@
 
 data_path="/data/station-data/bastille.txt"
 
-sleep 15
+sleep 11
 
 while true; do
     while IFS= read -r line; do
