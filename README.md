@@ -7,7 +7,7 @@ This environment hosts these components :
 
 * a kafka cluster with actives producers and real time feed topics about metro ligne 1 logs
 
-* an administration for kafka with [AKHQ](https://github.com/tchiotludo/akhq/blob/dev/docs/assets/images/video.gif)
+* an administration for kafka with [AKHQ](https://github.com/tchiotludo/akhq)
 
 ![](docs/live-tail-akhq.png)
 
@@ -111,6 +111,8 @@ The sixth is filled once at initialisation.
 Station producers emits data continuously, at 1 event every 8 seconds for terminus and 1 event every 4 seconds for normal stations.
 
 An event is a message composed by a **key**, `null` in our usecase, and a **value** of format `train_number|station|train_state|timestamp`.
+
+NB: TimeBetweenStations has a special structure: `previous_station|next_station|time_between`.
 
 
 ## Step 3 : explore ksqldb
