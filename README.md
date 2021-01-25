@@ -112,7 +112,7 @@ Station producers emits data continuously, at 1 event every 8 seconds for termin
 
 An event is a message composed by a **key**, `null` in our usecase, and a **value** of format `train_number|station|train_state|timestamp`.
 
-NB: TimeBetweenStations has a special structure: `previous_station|next_station|time_between`.
+NB: TimeBetweenStations has a special structure: `previous_station|next_station|duration`.
 
 
 ## Step 3 : explore ksqldb
