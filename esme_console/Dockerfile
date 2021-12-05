@@ -18,9 +18,9 @@ RUN curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add - && \
 # installation of kafka
 RUN apt install -y default-jdk
 
-RUN wget https://downloads.apache.org/kafka/2.7.0/kafka_2.13-2.7.0.tgz &&\
-    tar xzf kafka_2.13-2.7.0.tgz &&\
-    mv kafka_2.13-2.7.0 /usr/local/kafka
+RUN wget https://downloads.apache.org/kafka/2.7.2/kafka_2.13-2.7.2.tgz &&\
+    tar xzf kafka_2.13-2.7.2.tgz &&\
+    mv kafka_2.13-2.7.2 /usr/local/kafka
 
 COPY ksql /usr/bin/ksql
 RUN chmod +x /usr/bin/ksql
