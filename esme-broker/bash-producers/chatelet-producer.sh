@@ -1,6 +1,6 @@
 #!/bin/bash
 
-data_path="/data/station-data/chatelet.txt"
+data_path="/data/station-data/CHATELET.txt"
 
 sleep 15
 

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-data_path="/data/station-data/bastille.txt"
+data_path="/data/station-data/BASTILLE.txt"
 
 sleep 11
 

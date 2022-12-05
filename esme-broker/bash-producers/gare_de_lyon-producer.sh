@@ -1,6 +1,6 @@
 #!/bin/bash
 
-data_path="/data/station-data/gdl.txt"
+data_path="/data/station-data/GARE_DE_LYON.txt"
 
 sleep 8
 

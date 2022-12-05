@@ -1,6 +1,6 @@
 #!/bin/bash
 
-data_path="/data/station-data/vincennes.txt"
+data_path="/data/station-data/VINCENNES.txt"
 
 while true; do
     line_index=0

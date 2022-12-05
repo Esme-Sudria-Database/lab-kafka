@@ -1,4 +1,4 @@
-FROM confluentinc/cp-enterprise-kafka:6.0.1
+FROM confluentinc/cp-kafka:7.2.2
 
 USER root
 
@@ -8,7 +8,6 @@ COPY Procfile Procfile
 COPY run-broker.sh  run-broker.sh
 COPY run-producer.sh  run-producer.sh
 
-RUN yum install python3 -y
 RUN pip3 install honcho
 
 COPY bash-producers bash-producers

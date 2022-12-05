@@ -1,6 +1,6 @@
 #!/bin/bash
 
-data_path="/data/station-data/nation.txt"
+data_path="/data/station-data/NATION.txt"
 
 sleep 5
 

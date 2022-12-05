@@ -11,48 +11,15 @@ This environment hosts these components :
 
 ![](docs/live-tail-akhq.png)
 
-## General information
+## TLDR
 
-* [website](esme.farcellier.com)
+This lab provides a kafka environment to play with ksqldb, a stream processing tool inspired by SQL.
 
-## Requirement 1 : installation to perform on your computer
+Administrator interface can be seen at `http://localhost:8080`
 
-You will need those softwares on your computer :
+Queries can be run on `http://localhost:7681` after entered `ksql http://ksqldb-server:8088`
 
-* [Docker](https://www.docker.com/)
-* [Git](https://git-scm.com/)
-
-On linux
----------
-
-* 1. [install docker](https://docs.docker.com/engine/install/ubuntu/)
-
-* 2. install git
-
-```
-sudo apt-get install git
-```
-
-* 3. [install docker-compose](https://docs.docker.com/compose/install/#install-compose-on-linux-systems)
-
-On windows
------------
-
-* 1. [install docker](https://docs.docker.com/docker-for-windows/install/)
-
-* 2. [install git](https://git-scm.com/download/win)
-
-On mac
--------
-
-* 1. [install docker](https://docs.docker.com/docker-for-mac/install/)
-
-* 2. install git
-
-```
-brew install git
-```
-
+To know more, please read the following.
 
 ## Step 1 : install the environment
 
@@ -74,6 +41,8 @@ cd lab-kafka
 docker-compose up
 ```
 
+4. Wait until download is finished and only logs from lab services appear on the terminal
+
 ## Step 2 : explore kafka topics
 
 The administration console is accessible through your internet browser.
@@ -92,13 +61,12 @@ Don't hesitate to click on topics to see events !
 
 ### Details
 
-There are currently 6 topics:
+There are currently 5 topics:
 * VincennesStation
 * NationStation
 * GareDeLyonStation
 * Bastilletation
 * ChateletStation
-* TimeBetweenStations
 
 The first five are filled continuously with logs from metro stations.
 
@@ -111,8 +79,6 @@ The sixth is filled once at initialisation.
 Station producers emits data continuously, at 1 event every 8 seconds for terminus and 1 event every 4 seconds for normal stations.
 
 An event is a message composed by a **key**, `null` in our usecase, and a **value** of format `train_number|station|train_state|timestamp`.
-
-NB: TimeBetweenStations has a special structure: `previous_station|next_station|duration`.
 
 
 ## Step 3 : explore ksqldb
@@ -141,5 +107,3 @@ At this point, you are able to run query from the course.
 
 * Luc Marchand
 * Fabien Arcellier
-
-
