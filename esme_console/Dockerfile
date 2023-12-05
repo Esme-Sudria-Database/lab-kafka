@@ -26,9 +26,9 @@ RUN apt-get update &&\
 # installation of kafka
 RUN apt install -y default-jdk
 
-RUN wget https://downloads.apache.org/kafka/3.2.3/kafka_2.13-3.2.3.tgz &&\
-    tar xzf kafka_2.13-3.2.3.tgz &&\
-    mv kafka_2.13-3.2.3 /usr/local/kafka
+RUN wget https://downloads.apache.org/kafka/3.5.1/kafka_2.13-3.5.1.tgz &&\
+    tar xzf kafka_2.13-3.5.1.tgz &&\
+    mv kafka_2.13-3.5.1 /usr/local/kafka
 
 COPY ksql /usr/bin/ksql
 RUN chmod +x /usr/bin/ksql
